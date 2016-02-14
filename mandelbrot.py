@@ -2,12 +2,12 @@ import png
 import math, cmath
 import sys
 
-sys.setrecursionlimit(1000) # the recursion limit needs to be increased if you make MAXIT higher
-
+NAME = "mandelbrot.png"
 WIDTH, HEIGHT = 1000, 1000
-MAXIT = 500 # Needs to be increased when zooming in, to get detail
 X, XL =  -.5, 2
 Y, YL = 0,  2
+MAXIT = 500 # Needs to be increased when zooming in, to get detail
+sys.setrecursionlimit(1000) # the recursion limit needs to be increased if you make MAXIT higher
 
 #Coordinates as center (normally they are top-left corner)
 X -= XL/2
@@ -41,7 +41,7 @@ def main():
                 #row = row + (math.floor(255/MAXIT*m), math.floor(255/MAXIT*m/5), 0,) #Change the equation to make fancy colors
         image.append(row)
 
-    f = open("mandelbrot2_test.png", "wb")
+    f = open(NAME, "wb")
     w = png.Writer(WIDTH, HEIGHT, greyscale=True)
     w.write(f, image)
     f.close()
