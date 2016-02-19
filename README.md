@@ -17,5 +17,5 @@ The variables in the top of the program are used to custimize the output.
  
 ## Further customization
 There are a few other things that can be changed to customize the output:
- * Colorcycle can be changed by editing `m = m` to something like `m = 2*m` to change how fast the colors cycle. 
+ * Colorcycle can be changed by editing `m = m` to something like `m = 2*m` to change how fast the colors cycle. This sometimes needs to be asjusted when `MAXIT` is changed.
  * Color can be changed from grayscale to rgb by commenting the the line setting the grayscale color, and uncommenting the line setting RGB color. You can change how the RGB color is calculated to get a colorcycle that you like. The line `w = png.Writer(WIDTH, HEIGHT, greyscale=True)` also needs to be changed to `w = png.Writer(WIDTH, HEIGHT, greyscale=False)`.
