@@ -4,7 +4,7 @@ Program written in python, approximating the mandelbrot set, and saving it to a 
 ## How to use
 The program requires the [PyPNG](https://github.com/drj11/pypng) module. ([python2-pypng](https://aur.archlinux.org/packages/python2-pypng/) AUR package if running Arch Linux)
 
-To start the program, run `python2 mandelbrot.py`. The number of processed lines is writen every time the program is done processing a horisontal 1px line.
+To start the program, run `python2 mandelbrot.py`.
 
 When the program is done, it will genrate a .png file in the same directory as the program (will overrite file with the same name). By default the image will be grayscale.
 
