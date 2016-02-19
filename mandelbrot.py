@@ -4,8 +4,8 @@ import sys
 
 NAME = "mandelbrot.png"
 WIDTH, HEIGHT = 1000, 1000
-X, XL =  -.7, 3.0
-Y, YL = 0,  3.0
+X, XL =  -.7, 3
+Y, YL = 0,  3
 MAXIT = 500 # Needs to be increased when zooming in, to get detail
 sys.setrecursionlimit(1000) # the recursion limit needs to be increased if you make MAXIT higher
 
@@ -27,8 +27,8 @@ def main():
         print h
         row = ()
         for w in xrange(WIDTH):
-            x = X + w * XL/WIDTH
-            y = Y - h * YL/HEIGHT
+            x = X + w * float(XL)/WIDTH
+            y = Y - h * float(YL)/HEIGHT
             m = mandelbrot(0, complex(x, y), 0)
 
             if m == None:
