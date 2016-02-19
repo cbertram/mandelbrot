@@ -4,8 +4,8 @@ import sys
 
 NAME = "mandelbrot.png"
 WIDTH, HEIGHT = 1000, 1000
-X, XL =  -.5, 2
-Y, YL = 0,  2
+X, XL =  -.7, 3.0
+Y, YL = 0,  3.0
 MAXIT = 500 # Needs to be increased when zooming in, to get detail
 sys.setrecursionlimit(1000) # the recursion limit needs to be increased if you make MAXIT higher
 
