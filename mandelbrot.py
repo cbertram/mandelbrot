@@ -23,10 +23,10 @@ def mandelbrot(z, c, it):
 
 def main():
     image = []
-    for h in range(HEIGHT):
+    for h in xrange(HEIGHT):
         print h
         row = ()
-        for w in range(WIDTH):
+        for w in xrange(WIDTH):
             x = X + w * XL/WIDTH
             y = Y - h * YL/HEIGHT
             m = mandelbrot(0, complex(x, y), 0)
