@@ -24,7 +24,8 @@ def mandelbrot(z, c, it):
 def main():
     image = []
     for h in xrange(HEIGHT):
-        print h
+        sys.stdout.write(str(float(h)/HEIGHT*100) + "% complete (line " + str(h) + " of " + str(HEIGHT) + ") \r")
+        sys.stdout.flush()
         row = ()
         for w in xrange(WIDTH):
             x = X + w * float(XL)/WIDTH
@@ -41,6 +42,8 @@ def main():
                 #row = row + (math.floor(255/MAXIT*m), math.floor(255/MAXIT*m/5), 0,) #Change the equation to make fancy colors
         image.append(row)
 
+    print ""
+        
     f = open(NAME, "wb")
     w = png.Writer(WIDTH, HEIGHT, greyscale=True)
     w.write(f, image)
